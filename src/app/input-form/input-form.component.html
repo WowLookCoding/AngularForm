@@ -1,0 +1,19 @@
+<div>
+    <form (ngSubmit)="onSubmit();" #productForm="ngForm" >
+        <div>
+            <label for="name">Name:</label>
+            <input name="name" id="name" type="text" [(ngModel)]="model.name" #name="ngModel" required/>
+        </div>
+        <div>
+            <label for="desc">Description:</label>
+            <input name="desc" id="desc" type="text" [(ngModel)]="model.desc" #desc="ngModel" required/>
+        </div>
+        <div>
+            <label for="price">Price:</label>
+            <input name="price" id="price" type="text" [(ngModel)]="model.price" #price="ngModel" required/>
+        </div>
+        <div>
+            <input type="submit" value="Submit" [disabled]="!productForm.form.valid">
+        </div>
+    </form>
+</div>
