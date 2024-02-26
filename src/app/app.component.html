@@ -1,1 +1,4 @@
-<app-input-form></app-input-form>
+<!-- All outputs use circular brackets. $event is a built-in parameter used for emitted values. -->
+<app-input-form (dataSubmit)="getData($event)"></app-input-form> 
+<!-- All input uses square brackets. -->
+<app-output-form [data]="data"></app-output-form>
