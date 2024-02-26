@@ -17,5 +17,7 @@ export class InputFormComponent {
     console.log(this.model);
     // Emits the form values on submit.
     this.dataSubmit.emit(this.model); 
+     // Creates a new object so the form doesn't synchronize with empty values.
+    this.model = new Product("","",0);
   }
 }

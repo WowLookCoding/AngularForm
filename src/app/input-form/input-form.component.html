@@ -1,5 +1,6 @@
 <div>
-    <form (ngSubmit)="onSubmit();" #productForm="ngForm" >
+    <!-- After submit, refresh all values and submit status in the form. -->
+    <form (ngSubmit)="onSubmit();productForm.resetForm()" #productForm="ngForm" >
         <div>
             <label for="name">Name:</label>
             <input name="name" id="name" type="text" [(ngModel)]="model.name" #name="ngModel" required/>
